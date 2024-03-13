@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #2afaf6;
+}
+
+.wrapper {
+    position: relative;
+    height: 400px;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 3em;
+    color: #2af3fa;
+    margin: 15px;
+}
+
+.btn-group {
+    /* width: 100%; */
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+button {
+    position: absolute;
+    width: 150px;
+    height: inherit;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 30px;
+    border: 2px solid #2af3fa;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+}
+
+button:nth-child(1) {
+    margin-left: -200px;
+    background: #2af3fa;
+}
+
+button:nth-child(2) {
+    margin-right: -200px;
+    color: #2af3fa;
+}
+
+.btn-group canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.no_show {
+    display: none;
+    font-size: 3rem;
+    text-align: center;
+    color: #292929;
+    border-radius: 20px;
+    background: url(https://dictionary.cambridge.org/images/thumb/black_noun_002_03536.jpg?version=5.0.388);
+}
+
+.yes_show {
+    display: none;
+}
+
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 23px;
+}
+
+input[type=text],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.form {
+    width: 300px;
+    height: 400px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}

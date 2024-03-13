@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="hide">
+            <h2 class="question">Do you really want to see me?</h2>
+            <div class="btn-group">
+                <button class="yes-btn" onclick="yes()">Yes</button>
+                <button class="no-btn" onclick="no()" id="no">No</button>
+            </div>
+            <div class="no_side"></div>
+        </div>
+        <div class="no_show">
+            <pre>
+I really apriciate your choice. 
+Because i am not a good looking  
+person and my face is very ugly!
+But if you still want to know more
+about me you cant read text like that
+you cant see me clearly.
+            </pre>
+        </div>
+
+        <div class="yes_show">
+            <div class="img">
+                <img src="https://images.snapwi.re/edce/5e05066c5995174332ebd061.w800.jpg" style="border-radius: 5px;" width="300px" height="400px"
+                    alt="">
+            </div>
+            <div class="text">
+                <p class="content">
+        Bilkul nhi manoge dekhna hi chte <br>
+        ho kya milega dekh kr kyu kisi ko <br>
+        demotivate krna chta ek insaan jo ki <br>
+        khusi sai apni zindgi jina chta h usko <br>
+        dekh kr bura bhala khane sai aapko kya<br>
+         milega mere face karan ek hi dost nhi<br>
+         bne isliye to online aaya hu ki yha <br>
+         kon hi dekhega mujhe n dekhega n hi <br>
+         dosto tutegi mai bhi khus samne wala <br>
+         bhi khus are lgta h maine jyada hi bol <br>
+         diya mai kaise soch leta hu itna kuch <br>
+         lg rha h update ho rha hu waise bhi mai <br>
+         10th mai abhi gya hu isliye utna nhi bolna <br>
+         chta thanks for your time next page par ja <br>
+         rhe ho to apna feedback jarur dena.
+                </p>
+            </div>
+            <div class="form">
+                <form method="POST" name="google-sheet">
+                    <label for="fname">Name</label>
+                    <input type="text" id="fname" name="Name" placeholder="Your name..">
+
+                    <label for="lname">Gender</label>
+                    <input type="text" id="lname" name="Gender" placeholder="Type male/female">
+
+                    <label for="country">Why you want to see me?</label><br>
+                    <textarea name="Feedback" id="" cols="35" rows="5"></textarea>
+
+                    <input type="submit" value="Submit" name="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="Assets/js/script.js"></script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyR10cEQXKP6g4k7o7Pfu8VSdf9FzpAVrd9YOFu00ok9yBuG2rWdnNLSKvYPq5F6UEZSw/exec'
+        const form = document.forms['google-sheet'];
+
+        form.addEventListener('submit',e =>{
+            e.preventDefault();
+            fetch(scriptURL, {
+                method:'POST',body:new FormData(form)
+            })
+            .then(response => alert("Thanks for submission"))
+            .catch(error =>console.error("HKDHD",error.message))
+        })
+    </script>
+</body>
+
+</html>
