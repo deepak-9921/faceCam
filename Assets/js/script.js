@@ -1,5 +1,6 @@
 let hide_div = document.querySelector('.hide');
 let no_div = document.querySelector('.no_show');
+let wrapper = document.querySelector('.wrapper');
 let yes_div = document.querySelector('.yes_show');
 // console.log(hide);
 function no(){
@@ -28,8 +29,7 @@ function run_confetti(){
 }
 
 function yes(){
-    hide_div.style.display = "none";
+    wrapper.style.display = "none";
     yes_div.style.display = "flex";
     run_confetti();
-    
 }
